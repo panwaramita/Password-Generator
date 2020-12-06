@@ -22,4 +22,4 @@ Project is created with:
 ![image](./assets/images/screenshot.png)
 ## Link
 
-[My Portfolio](https://panwaramita.github.io/Password-Generator/)
+[Password Generator](https://panwaramita.github.io/Password-Generator/)
