@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Password Generator project generate the password by asking the user for their provide inputs.The user has to select the password based on given criteria:
+Password Generator project generate the password by asking the user to provide inputs.The user has to select the password based on given criteria:
 
 * The password length should be between 1 to 128 character.
 * The password should contain atleast one or more from the lowercase,uppercase, number and special characters.
