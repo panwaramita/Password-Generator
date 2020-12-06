@@ -1,5 +1,15 @@
 // assign the button info to the variable
 var generateBtn = document.querySelector("#generate");
+var specialchar = "!@#$%^&*(){}[]=<>/,.|~?";//sepcial variable declaration
+var lowercase = "abcdefghijklmnopqrstuvwxyz";//lowercase variable declaration
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//uppercase variable declaration
+var number = "0123456789";//number variable declaration
+var lower = true;//get the prompt result true or faLse 
+var upper = true;
+var num = true;
+var char = true;
+let passwordval = "";//get the password 
+var lenght = 0;//get the length of the password
 
 // Write password to the #password input
 function writePassword() {
@@ -11,22 +21,10 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
-var specialchar = "!@#$%^&*(){}[]=<>/,.|~?";//sepcial variable declaration
-var lowercase = "abcdefghijklmnopqrstuvwxyz";//lowercase variable declaration
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//uppercase variable declaration
-var number = "0123456789";//number variable declaration
-var lower = true;//get the prompt result true or faLse 
-var upper = true;
-var num = true;
-var char = true;
-let passwordval = "";//get the password 
-var lenght = 0;//get the length of the password
 //  function to get the random lowercase letter
 function getlowercase() {
   return lowercase[Math.floor(Math.random() * lowercase.length)];
