@@ -13,14 +13,14 @@ var lenght = 0;//get the length of the password
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword();//store the password retun from the function
   var passwordText = document.querySelector("#password");
-  if (lenght === null) {
+  if (lenght === null) {//if user canceled to genrate password
     passwordText.value = "";
   }
   else {
     alert("The password is: " + password);
-    passwordText.value = password;
+    passwordText.value = password;//assign the password to the textarea
   }
 
 }
@@ -51,7 +51,7 @@ function getNumber() {
 //function to  check the condition for the password genration
 function generatePassword() {
   lenght = prompt("Enter the lenght of the password.");
-  if (lenght === null) {
+  if (lenght === null) {//check if user canceled 
     alert("User cancelled");
   }
   else if (isNaN(lenght)) {//check the length is a number or not
@@ -62,12 +62,16 @@ function generatePassword() {
     alert("Password lenght should be range between 8 to 128.");
     generatePassword();
   }
-  else {
-    lenght = parseInt(lenght, 10);
+  else if(lenght%1!==0)//check of the lenght is a int number
+  {
+    alert("Enter the valid number.");
+    generatePassword();
+  }
+  else {//if the lenght is valid 
     checkSpecialChar();
 
   }
-  return passwordVal;
+  return passwordVal;//return the genrated password
 }
 
 function checkSpecialChar() {
