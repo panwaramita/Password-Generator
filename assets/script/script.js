@@ -9,13 +9,13 @@ var upper = true;
 var num = true;
 var char = true;
 let passwordVal = "";//get the password 
-var lenght = 0;//get the length of the password
+var length = 0;//get the length of the password
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();//store the password retun from the function
   var passwordText = document.querySelector("#password");
-  if (lenght === null) {//if user canceled to genrate password
+  if (length === null) {//if user canceled to genrate password
     passwordText.value = "";
   }
   else {
@@ -50,24 +50,24 @@ function getNumber() {
 
 //function to  check the condition for the password genration
 function generatePassword() {
-  lenght = prompt("Enter the lenght of the password.");
-  if (lenght === null) {//check if user canceled 
+  length = prompt("Enter the length of the password.");
+  if (length === null) {//check if user canceled 
     alert("User cancelled");
   }
-  else if (isNaN(lenght)) {//check the length is a number or not
-    alert("The lenght should be a number.");
+  else if (isNaN(length)) {//check the length is a number or not
+    alert("The length should be a number.");
     generatePassword();
   }
-  else if ((lenght < 8 || lenght > 128)) {//check the length is between 8 to 128
-    alert("Password lenght should be range between 8 to 128.");
+  else if ((length < 8 || length > 128)) {//check the length is between 8 to 128
+    alert("Password length should be range between 8 to 128.");
     generatePassword();
   }
-  else if(lenght%1!==0)//check of the lenght is a int number
+  else if(length%1!==0)//check of the length is a int number
   {
     alert("Enter the valid number.");
     generatePassword();
   }
-  else {//if the lenght is valid 
+  else {//if the length is valid 
     checkSpecialChar();
 
   }
@@ -86,7 +86,7 @@ function checkSpecialChar() {
   }
   else {
     passwordVal = "";
-    for (var i = 0; i < lenght; i++) {
+    for (var i = 0; i < length; i++) {
       var x = generateX();//call the function to get the password genrated
       passwordVal += x;
     }
