@@ -18,6 +18,10 @@ function writePassword() {
   if (length === null) {//if user canceled to genrate password
     passwordText.value = "";
   }
+  else if(password==="")//if user does not select the special character
+  {
+    passwordText.value = "";
+  }
   else {
     alert("The password is: " + password);
     passwordText.value = password;//assign the password to the textarea
@@ -74,15 +78,15 @@ function generatePassword() {
   return passwordVal;//return the genrated password
 }
 
-function checkSpecialChar() {
-  lower = confirm("Do you want to include lowercase letter?");
-  upper = confirm("Do you want to include uppercase letter?");
+function checkSpecialChar() {//function to allow user to select the character 
+  lower = confirm("Do you want to include lowercase character?");
+  upper = confirm("Do you want to include uppercase character?");
   num = confirm("Do you want to include number?");
   char = confirm("Do you want to include special character?");
   if (lower === false && upper === false && num === false && char === false) {
 
     alert("At least one character type should be selected");
-    checkSpecialChar();
+    passwordVal = "";
   }
   else {
     passwordVal = "";
