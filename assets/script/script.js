@@ -56,7 +56,7 @@ function getNumber() {
 function generatePassword() {
   length = prompt("Enter the length of the password.");
   if (length === null) {//check if user canceled 
-    alert("User cancelled");
+    alert("User cancelled.");
   }
   else if (isNaN(length)) {//check the length is a number or not
     alert("The length should be a number.");
@@ -77,15 +77,15 @@ function generatePassword() {
   }
   return passwordVal;//return the genrated password
 }
-
-function checkSpecialChar() {//function to allow user to select the character 
+//function to allow user to select the character 
+function checkSpecialChar() {
   lower = confirm("Do you want to include lowercase character?");
   upper = confirm("Do you want to include uppercase character?");
   num = confirm("Do you want to include number?");
   char = confirm("Do you want to include special character?");
   if (lower === false && upper === false && num === false && char === false) {
 
-    alert("At least one character type should be selected");
+    alert("At least one character type should be selected,");
     passwordVal = "";
   }
   else {
